@@ -1,0 +1,21 @@
+{% include "blogapp/base.html" %}
+
+<body data-gr-c-s-loaded="true">
+
+  <div class="container text-center">
+
+    {% block content %}
+    {% endblock %}
+
+    <div class="row">       
+      <div class="blog-post mx-auto">
+        <img src="{{ post.imageurl }}" class="img-fluid" alt="Responsive image" style="width: 600px; height: 500px;">
+        <h2> {{ post.title }} </h2>
+        <p> {{ post.content }} </p>
+      </div>
+    </div>
+    <div class="row">
+      <a href="/blog/" class="btn btn-primary btn-lg btn-block">Regresar</a>
+    </div>
+  </div>
+</body>
